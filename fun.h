@@ -16,8 +16,8 @@ struct point
     float x, y;
 };
 
+float distance(struct point *loc1);
 double angle1(struct point *loc1, struct point *loc2);
 double angle2(struct point *loc2, struct point *loc3);
 float corner(double angle2, double angle1);
-
 #endif /* fun_h */
