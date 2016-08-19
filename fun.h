@@ -16,8 +16,11 @@ struct point
     float x, y;
 };
 
-float distance(struct point *loc1);
-double angle1(struct point *loc1, struct point *loc2);
-double angle2(struct point *loc2, struct point *loc3);
-float corner(double angle2, double angle1);
+float distance(struct point *loc);
+float angle1(struct point *loc1, struct point *loc2);
+float angle2(struct point *loc1, struct point *loc2);
+float angle3(struct point *loc1, struct point *loc2);
+float corner(float a2, float a1);
+float cormax(float a2, float a1);
+
 #endif /* fun_h */

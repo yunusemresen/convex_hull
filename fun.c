@@ -12,30 +12,44 @@
 #include <stdlib.h>
 #include <math.h>
 
-float distance(struct point *loc1)
+float distance(struct point *loc)
 {
     float distance;
-    distance = sqrt((loc1->x * loc1->x) + (loc1->y * loc1->y));
+    distance = sqrt((loc->x * loc->x) + (loc->y * loc->y));
     return distance;
 }
 
-double angle1(struct point *loc1, struct point *loc2)
+float angle1(struct point *loc1, struct point *loc2)
 {
-    double angle1;
+    float angle1;
     angle1 = atan((loc1->y - loc2->y) / (loc1->x - loc2->x));
     return angle1;
 }
 
-double angle2(struct point *loc2, struct point *loc3)
+float angle2(struct point *loc1, struct point *loc2)
 {
-    double angle2;
-    angle2 = atan((loc2->y - loc3->y) / (loc2->x - loc3->x));
+    float angle2;
+    angle2 = atan((loc1->y - loc2->y) / (loc1->x - loc2->x));
     return angle2;
 }
 
-float corner(double angle1, double angle2)
+float angle3(struct point *loc1, struct point *loc2)
 {
-    double corner;
-    corner = 180.00 - (angle2 - angle1);
+    float angle3;
+    angle3 = atan((loc1->y - loc2->y) / (loc1->x - loc2->x));
+    return angle3;
+}
+
+float corner(float a1, float a2)
+{
+    float corner;
+    corner = 180.00 - (a2 - a1);
     return corner;
+}
+
+float cormax(float a1, float a2)
+{
+    float cormax;
+    cormax = 180.00 - (a2 - a1);
+    return cormax;
 }
